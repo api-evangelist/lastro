@@ -1,9 +1,28 @@
 aid: lastro
 name: Lastro
-description: 'Lastro is a company surfaced as a portfolio company of prosus-ventures, qed-investors and
-  added to the API Evangelist network as a stub for enrichment. Sector: proptech. This profile is a lead
-  awaiting the enrichment pipeline.'
+description: 'Lastro is a Brazilian proptech company building artificial intelligence for the real estate
+  market. Its product, Lais (lais.ai), is a generative-AI platform for real estate agencies that engages
+  and qualifies inbound leads over WhatsApp and other channels, then follows the customer journey from
+  first contact through to a closed deal — covering property listing and management, marketing and lead
+  generation, pre-qualification, visit scheduling, administrative service and strategic reporting. Human
+  agents and the AI work the same queue inside Casa da Lais, the operator dashboard. Lastro reports more
+  than 1,000 real estate agency customers, over 5 million people served and more than R$ 12 billion in
+  sales volume (VGV) managed in Brazil. The company is backed by Prosus Ventures and QED Investors.
+  Lastro publishes no public developer API; the only programmatic surface found is the Wix
+  platform-provisioned site MCP endpoint on lastro.co.'
 url: https://raw.githubusercontent.com/api-evangelist/lastro/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://static.wixstatic.com/media/f95461_58b762df582a4769ac134f3de7a902a9%7Emv2.jpg/v1/fit/w_2500,h_1330,al_c/f95461_58b762df582a4769ac134f3de7a902a9%7Emv2.jpg
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
@@ -11,12 +30,19 @@ x-backed-by:
 - qed-investors
 x-tier: stub
 x-tier-reason: portfolio-lead
+x-no-public-api: true
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
 - Proptech
+- Real Estate
+- Artificial Intelligence
+- Brazil
+- Lead Management
+- Conversational AI
+- WhatsApp
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -26,3 +52,35 @@ maintainers:
 common:
 - type: Website
   url: https://lastro.co
+- type: ProductWebsite
+  url: https://lais.ai
+- type: Blog
+  url: https://lais.ai/blog
+- type: Support
+  url: https://suporte.lais.ai
+- type: Login
+  url: https://casa.lais.ai
+- type: TermsOfService
+  url: https://www.lastro.co/termos-de-uso
+- type: PrivacyPolicy
+  url: https://www.lastro.co/politica-de-privacidade
+- type: StatusPage
+  url: https://status.lais.ai/
+- type: Lifecycle
+  url: lifecycle/lastro-lifecycle.yml
+- type: MCPServer
+  url: mcp/lastro-mcp.yml
+- type: LLMsTxt
+  url: llms/lastro-llms.txt
+- type: LLMsTxt
+  name: Lais llms.txt
+  url: llms/lastro-lais-llms.txt
+- type: Packages
+  url: packages/lastro-packages.yml
+- type: DomainSecurity
+  url: security/lastro-domain-security.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
