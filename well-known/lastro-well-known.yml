@@ -1,0 +1,27 @@
+generated: '2026-07-19'
+method: searched
+source: live probes of Lastro/Lais public hosts
+summary: |
+  No /.well-known/ discovery documents are published on any Lastro or Lais
+  host. Both properties are marketing sites (lastro.co on Wix, lais.ai on
+  Vercel/Next.js) with no public API, so there is no OIDC/OAuth discovery,
+  API catalog, or security.txt surface. Recorded as a negative result; no
+  WellKnown or SecurityTxt pointer is wired into apis.yml because nothing
+  was found.
+hosts:
+- host: https://www.lastro.co
+  documents:
+  - path: /.well-known/security.txt
+    status: 400
+- host: https://lais.ai
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404

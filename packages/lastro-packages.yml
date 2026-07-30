@@ -1,0 +1,44 @@
+generated: '2026-07-19'
+method: searched
+source: npm registry search + registry lookups (npm, PyPI)
+summary: |
+  Lastro publishes no client SDK. Registry sweeps of npm, PyPI, Maven Central,
+  NuGet, pkg.go.dev, RubyGems, Packagist and crates.io found exactly one
+  first-party package: an internal Retool helper library, published under the
+  @lastro npm scope by a @lastro.co maintainer. It is NOT an API client SDK
+  and does NOT wrap any Lastro/Lais API — it shares functionality between the
+  company's internal Retool applications.
+  Because no official API client library exists, this artifact carries a
+  `Packages` pointer only. NO `SDKs` pointer is wired: emitting one would fire
+  the sdk_count ergonomics check for a library that no external developer can
+  use to call an API.
+packages:
+- language: javascript
+  registry: npm
+  name: '@lastro/retool-utils'
+  url: https://www.npmjs.com/package/@lastro/retool-utils
+  install: npm install @lastro/retool-utils
+  official: true
+  official_evidence: published by maintainer pedro.milanez@lastro.co (company domain)
+  api_client: false
+  version: 0.10.3
+  description: |
+    Loaded in all Lastro Retool applications; shares functionality across
+    those internal applications. Internal tooling, not a public API SDK.
+registries_checked:
+- registry: npm
+  result: 1 first-party package (internal tooling)
+- registry: pypi
+  result: none
+- registry: maven-central
+  result: none
+- registry: nuget
+  result: none
+- registry: pkg.go.dev
+  result: none
+- registry: rubygems
+  result: none
+- registry: packagist
+  result: none
+- registry: crates.io
+  result: none

@@ -1,0 +1,68 @@
+# Lastro | IA para o mercado imobiliário
+> O site da Lastro detalha suas políticas de cookies e privacidade, explicando como os dados dos usuários são coletados, utilizados e protegidos em conformidade com a LGPD. A plataforma também apresenta a Lastro como uma empresa que desenvolve inteligência artificial avançada para o mercado imobiliário, com o objetivo de transformar o setor e simplificar a vida das pessoas através da tecnologia. O site também convida profissionais a fazerem parte de sua equipe e oferece informações sobre suas soluções e cultura.
+
+## Homepage link
+- [home](https://www.lastro.co/)
+
+## Acesso de agentes de IA
+
+Este site é desenvolvido pelo Wix e é compatível com o Model Context Protocol (MCP)
+para acesso de IA agêntica. Agentes de IA podem se conectar diretamente para recuperar
+conteúdo do site online e atualizado - não é necessário extrair dados.
+
+- [**Endpoint MCP do site**](https://www.lastro.co/_api/mcp)
+- [**Wix MCP Docs**](https://dev.wix.com/docs/develop-websites/articles/get-started/about-the-wix-site-mcp)
+
+## Ferramentas MCP disponíveis
+
+### GetBusinessDetails
+Recupera informações comerciais e do site, como fuso horário, email, telefone e endereço.
+- Nenhum parâmetro é necessário.
+
+### SearchInSite
+Faz buscas no site para obter informações.
+- **searchTerm** - O termo a ser buscado no site.
+
+### SearchSiteApiDocs
+Recupera a API documentation para as soluções de negócios Wix instaladas
+neste site e informa o cliente de IA como usar as APIs. Use este recurso para
+consultar produtos e serviços (em vez de SearchInSite).
+- **searchTerm** - O termo a ser buscado na API documentation do site.
+
+### GenerateVisitorToken
+Cria uma nova sessão de visitante e obtém um token de acesso de visitante para o site.
+Deve ser chamado antes de fazer qualquer solicitação de CallWixSiteAPI se nenhum token de visitante
+estiver disponível no contexto.
+- Nenhum parâmetro é necessário.
+
+### CallWixSiteAPI
+Faz chamadas dos métodos da API no site para realizar ações em nome de um visitante,
+como consultar dados do site, fazer um agendamento ou iniciar uma compra.
+- **visitorToken** - Token de acesso do visitante. Use GenerateVisitorToken primeiro se não estiver disponível.
+- **url** - URL absoluto do método da API a ser chamado (por exemplo: https://www.wixapis.com/...). Recupere usando SearchSiteApiDocs.
+- **method** - Método HTTP a ser usado para a chamada de API.
+- **body** - Corpo da solicitação como uma string do JSON válida.
+
+### ReadFullDocsArticle
+Busca um artigo completo do portal de documentação para desenvolvedores Wix.
+- **articleUrl** - URL de um artigo no portal de documentação para desenvolvedores Wix.
+
+### ReadFullDocsMethodSchema
+Busca o esquema completo para um método da API do Wix. Deve ser chamado antes de
+chamar o método real via CallWixSiteAPI.
+- **articleUrl** - URL do artigo de referência para o método da API do Wix.
+
+## O que os visitantes podem fazer via IA + MCP
+
+- Obter informações comerciais (informações de contato, local, horário)
+- Descobrir produtos e serviços em oferta
+- Agendar serviços e fazer reservas
+- Iniciar uma compra e ser direcionado para o site para concluir o checkout
+- Fazer perguntas e obter respostas relevantes sem precisar navegar no site
+
+## Observações
+
+- Nenhuma autenticação é necessária para se conectar ao endpoint MCP
+- Apenas informações públicas acessíveis no site estão disponíveis
+- O conteúdo está sempre online e em tempo real
+- Para receber atualizações de ferramentas, implemente uma chamada de tools/list ao receber uma notificação de atualização de ferramenta

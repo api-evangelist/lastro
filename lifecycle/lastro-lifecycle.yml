@@ -1,0 +1,30 @@
+generated: '2026-07-19'
+method: searched
+source: https://status.lais.ai/
+summary: |
+  Lastro publishes no public API, so there is no API versioning scheme,
+  deprecation policy, or Sunset/Deprecation header contract to capture. The
+  one real operational-transparency surface is the Lais product status page,
+  an incident.io-hosted page covering the four customer-facing services.
+status_page:
+  url: https://status.lais.ai/
+  provider: incident.io
+  verified: '2026-07-19'
+  subscribe: true
+  incident_history: https://status.lais.ai/
+  components:
+  - Casa da Lais
+  - Aplicativo Casa da Lais
+  - Recebimento de Leads
+  - Atendimento da Lais
+versioning:
+  scheme: null
+  notes: no public API; no published versioning policy
+deprecation:
+  policy_url: null
+  sunset_header: null
+  notes: no published deprecation policy
+sla:
+  url: null
+  uptime_target: null
+deprecated_operations: []

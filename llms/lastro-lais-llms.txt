@@ -1,0 +1,30 @@
+# Lais
+
+> A Lais é a plataforma de inteligência artificial que acompanha toda a jornada da imobiliária, do primeiro contato com o lead ao negócio fechado. Mais de 5 milhões de pessoas atendidas, mais de 1.000 imobiliárias clientes e mais de R$ 12 bilhões em VGV gerenciado no Brasil.
+
+A Lais não é um chatbot: é uma IA generativa que entende contexto, intenção e comportamento do lead para gerar respostas naturais e personalizadas em tempo real, via WhatsApp e outros canais. Ela atua em toda a operação imobiliária: captação e gestão de imóveis, marketing e geração de leads, pré-atendimento e qualificação, visitas, atendimento administrativo e dados estratégicos. Tudo integrado à Gestão de atendimentos, onde IA e time humano trabalham juntos dentro da Casa da Lais, a plataforma completa.
+
+A Lais não substitui a equipe: ela cuida do volume e libera corretores e atendentes para o que só humanos fazem bem: negociar, visitar e fechar. É um produto da Lastro (lastro.co), empresa brasileira de tecnologia para o mercado imobiliário.
+
+## Produto
+
+- [Funcionalidades da Lais](https://lais.ai/produto): visão completa dos módulos da plataforma, da captação de imóveis aos relatórios estratégicos
+- [Página inicial](https://lais.ai/): visão geral da plataforma e principais resultados
+
+## Cases de sucesso
+
+- [Todos os cases](https://lais.ai/cases): resultados documentados de clientes reais
+- [Franciosi Imóveis](https://lais.ai/cases/franciosi-converte-4x-mais-que-media): 12% de conversão de lead para visita, 4x a média do mercado
+- [Pantera Imóveis](https://lais.ai/cases/pantera-imoveis-82-conversao-452-visitas): 82% de conversão e 452 visitas agendadas
+- [SH Prime](https://lais.ai/cases/sh-prime-50-locacoes-reduz-arquivamento): 50% mais contratos de locação fechados
+
+## Conteúdo e dados
+
+- [Blog da Lais](https://lais.ai/blog): artigos sobre IA, gestão e estratégia para o mercado imobiliário
+- [DataLais](https://lais.ai/data-lais): relatório com inteligência de mercado extraída de milhões de atendimentos reais
+- [E-book: IA no mercado imobiliário](https://lais.ai/ebook-ia-mercado-imobiliario): guia completo sobre o uso de IA no setor
+- [E-book: manual de IA para gestores](https://lais.ai/ebook-manual-ia-gestores): material prático para gestores de imobiliárias
+
+## Contato
+
+- [Agendar demonstração](https://lais.ai/fale-com-a-gente): fale com um especialista e veja a Lais funcionando na prática
