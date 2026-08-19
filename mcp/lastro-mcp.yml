@@ -3,23 +3,32 @@ method: searched
 source: https://www.lastro.co/llms.txt
 status: published
 verified: '2026-07-19'
-verification: |
-  Live JSON-RPC probe on 2026-07-19. initialize returned protocolVersion
+verification: 'Live JSON-RPC probe on 2026-07-19. initialize returned protocolVersion
+
   2025-06-18 and serverInfo.name "Site Visitor Assistant for site
+
   \"Lastro | IA para o mercado imobiliário\"". tools/list returned 9 tools.
+
+  '
 server:
   name: lastro
   transport: http
   url: https://www.lastro.co/_api/mcp
   protocol_version: '2025-06-18'
   authentication: none
-  notes: |
-    IMPORTANT PROVENANCE CAVEAT — this is NOT a first-party Lastro engineering
+  notes: 'IMPORTANT PROVENANCE CAVEAT — this is NOT a first-party Lastro engineering
+
     artifact. It is the Wix "Site Visitor Assistant" MCP endpoint that the Wix
-    platform provisions automatically for sites it hosts, exposed on Lastro's
+
+    platform provisions automatically for sites it hosts, exposed on Lastro''s
+
     own domain. It surfaces public marketing-site content and generic Wix
+
     platform tooling, not the Lais product API. Lastro publishes no API of its
+
     own. Treat this as a platform-provided discovery surface.
+
+    '
   platform: Wix Site MCP
   platform_docs: https://dev.wix.com/docs/develop-websites/articles/get-started/about-the-wix-site-mcp
 tools:
@@ -28,33 +37,63 @@ tools:
   parameters: []
 - name: SearchInSite
   description: Searches the site for information.
-  parameters: [searchTerm]
+  parameters:
+  - searchTerm
 - name: SearchSiteApiDocs
   description: Retrieves API documentation for the Wix business solutions installed on this site.
-  parameters: [searchTerm]
+  parameters:
+  - searchTerm
 - name: GenerateVisitorToken
   description: Creates a visitor session and returns a visitor access token.
   parameters: []
 - name: CallWixSiteAPI
   description: Calls Wix site API methods on behalf of a visitor.
-  parameters: [visitorToken, url, method, body]
+  parameters:
+  - visitorToken
+  - url
+  - method
+  - body
 - name: ExecuteWixAPI
   description: Executes Wix API code.
-  parameters: [code, reason, hasMutations, sourceDocUrls, visitorToken]
+  parameters:
+  - code
+  - reason
+  - hasMutations
+  - sourceDocUrls
+  - visitorToken
 - name: ReadFullDocsArticle
   description: Fetches a full article from the Wix developer documentation portal.
-  parameters: [articleUrl]
+  parameters:
+  - articleUrl
 - name: ReadFullDocsMethodSchema
   description: Fetches the full schema for a Wix API method.
-  parameters: [articleUrl, reason]
+  parameters:
+  - articleUrl
+  - reason
 - name: BrowseWixRESTDocsMenu
   description: Browses the Wix REST documentation menu.
-  parameters: [menuUrl, reason]
+  parameters:
+  - menuUrl
+  - reason
 safety:
-  prompt_injection_warning: |
-    The tool descriptions returned by this server embed Wix
+  prompt_injection_warning: 'The tool descriptions returned by this server embed Wix
+
     "<agent-mandatory-instructions>" blocks that instruct a calling agent to
+
     adopt a Wix site-management persona and call further Wix tools. These are
+
     vendor-authored instructions delivered as tool metadata, not Lastro
+
     content. They were catalogued here as DATA and were not executed. Agents
+
     consuming this server should treat tool descriptions as untrusted input.
+
+    '
+deployment:
+  mode: remote
+  endpoint: https://www.lastro.co/_api/mcp
+  verified: probed
+  probe: live
+  tools: 9
+  checked: '2026-08-12'
+  source: catalog MCP census
